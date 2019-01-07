@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="smallFontSize">10sp</dimen>
+    <dimen name="subTitleFontSize">11sp</dimen>
+    <dimen name="titleFontSize">12sp</dimen>
+    <dimen name="headerFontSize">16sp</dimen>
+    <dimen name="largeFontSize">22sp</dimen>
+
+    <dimen name="editTextPaddingRight">12dp</dimen>
+    <dimen name="editTextPaddingLeft">12dp</dimen>
+    <dimen name="editTextPaddingTop">14dp</dimen>
+    <dimen name="editTextPaddingBottom">14dp</dimen>
+</resources>

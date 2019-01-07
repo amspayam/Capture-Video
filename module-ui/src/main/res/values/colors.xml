@@ -1,0 +1,43 @@
+<resources>
+    <color name="colorPrimary">#015E4C</color>
+    <color name="colorPrimaryDark">#003324</color>
+    <color name="colorAccent">#AAD581</color>
+    <color name="background">#FAFAFA</color>
+    <!--===========================================================================-->
+    <!--base colors-->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFF</color>
+    <color name="black">#444</color>
+    <color name="yellow">#EBB323</color>
+    <color name="red">#f85e5c</color>
+    <color name="green">#7ED321</color>
+    <color name="blue">#0084ff</color>
+    <color name="pink">#fec3c2</color>
+    <color name="stars">#D8B404</color>
+    <!--===========================================================================-->
+    <!--secondary colors-->
+    <color name="gray">#888888</color>
+    <color name="lightGray">#B3B3B3</color>
+    <color name="darkGray">#606060</color>
+    <!--===========================================================================-->
+    <!--view colors-->
+    <color name="textColorPrimary">#FFF</color>
+    <color name="textColorSecondary">#D3D3D5</color>
+    <color name="textColorPrimaryDark">#2F3336</color>
+    <color name="textColorSecondaryDark">#5a6268</color>
+    <color name="disableColor">#ACACAE</color>
+    <color name="dividerColor">#D3D3D5</color>
+    <!--===========================================================================-->
+    <!--other colors-->
+    <color name="accentPressed">#80a161</color>
+    <color name="whiteOpacity">#7fffffff</color>
+    <color name="blackOpacity">#87444444</color>
+    <color name="grayOpacity">#B7888888</color>
+    <!--===========================================================================-->
+    <color name="telegramBlue">#527da3</color>
+    <color name="telegramDarkBlue">#426482</color>
+    <color name="telegramBlack">#000</color>
+    <color name="telegramText">#C1C3C7</color>
+    <color name="telegramActive">#0088cc</color>
+    <color name="telegramHint">#888</color>
+</resources>

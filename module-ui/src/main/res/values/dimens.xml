@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="smallFontSize">12sp</dimen>
+    <dimen name="subTitleFontSize">13sp</dimen>
+    <dimen name="titleFontSize">14sp</dimen>
+    <dimen name="headerFontSize">18sp</dimen>
+    <dimen name="largeFontSize">24sp</dimen>
+
+    <dimen name="haftEditTextWidth">320dp</dimen>
+    <dimen name="cardCornerRadius">16dp</dimen>
+
+    <dimen name="editTextPaddingRight">12dp</dimen>
+    <dimen name="editTextPaddingLeft">12dp</dimen>
+    <dimen name="editTextPaddingTop">14dp</dimen>
+    <dimen name="editTextPaddingBottom">14dp</dimen>
+</resources>

@@ -1,0 +1,53 @@
+<resources>
+    <declare-styleable name="HaftEditText">
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:textStyle" />
+        <attr name="android:textColorHint" />
+        <attr name="android:hint" />
+        <attr name="android:enabled" />
+        <attr name="android:background" />
+        <attr name="android:imeOptions" />
+        <attr name="android:gravity" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLength" />
+        <attr name="android:maxLines" />
+        <attr name="android:lines" />
+        <attr name="imageLeft" format="reference|integer" />
+        <attr name="imageRight" format="reference|integer" />
+        <attr name="hasError" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HaftButton">
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:background" />
+        <attr name="android:enabled" format="boolean" />
+        <attr name="android:textStyle" />
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="paddingTop" format="dimension" />
+        <attr name="paddingRight" format="dimension" />
+        <attr name="paddingBottom" format="dimension" />
+        <attr name="loadingColor" format="color" />
+        <attr name="disableBackground" format="reference" />
+        <attr name="automaticLoading" format="boolean" />
+        <attr name="isFull" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HaftImageButton">
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:textStyle" />
+        <attr name="android:gravity" />
+        <attr name="android:tint" />
+        <attr name="icon" />
+        <attr name="marginIcon" format="dimension" />
+        <attr name="iconPosition" format="integer">
+            <enum name="right" value="1" />
+            <enum name="left" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+    </declare-styleable>
+</resources>

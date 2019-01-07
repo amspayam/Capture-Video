@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    def STRING = "String"
+    def BASE_URL_TAG = "BASE_URL"
+    def BASE_URL = "\"http://ws.hamrahsabz.com/api/\""
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            buildConfigField STRING, BASE_URL_TAG, BASE_URL
+            manifestPlaceholders = [applicationLabel: "@string/app_name_debug"]
+        }
+        release {
+            minifyEnabled false
+            buildConfigField STRING, BASE_URL_TAG, BASE_URL
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    /*Retrofit*/
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    /*Logger Retrofit*/
+    api 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    /*Gson*/
+    api 'com.google.code.gson:gson:2.8.5'
+}

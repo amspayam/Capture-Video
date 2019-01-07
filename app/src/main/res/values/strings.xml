@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DubSmash</string>
+
+    <string name="cancel">بی‌خیال</string>
+    <string name="permissionDeniedTitle">متاسفانه به دلیل عدم تایید دسترسی،ما قادر به انجام درخواست شما نیستیم؛ در صورت تمایل دسترسی‌ را دوباره تنظیم کنید</string>
+    <string name="tryAgain">تلاش مجدد</string>
+    <string name="ok">بسیار خب</string>
+    <string name="noValue">متاسفانه هیچ موردی یافت نشد!</string>
+    <string name="delete">حذف</string>
+    <string name="shareVia">اشتراک گذاری ازطریق</string>
+    <string name="newVersion">نسخه جدید نرم‌افزارانتشار یافته است، تمایل به دریافت نسخه جدید دارید؟</string>
+    <string name="update">بروزرسانی</string>
+    <string name="later">بعدا</string>
+
+    <string name="takePicture">عکس بگیر</string>
+
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+    <string name="permission_request">This sample needs permission for camera and audio recording.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This sample demonstrates how to record video using Camera2 API.
+
+
+        ]]>
+    </string>
+</resources>

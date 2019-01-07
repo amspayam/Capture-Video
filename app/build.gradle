@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+
+android {
+    def BOOLEAN = "boolean"
+    def STRING = "String"
+    def TRUE = "true"
+    def FALSE = "false"
+    def IS_CUSTOM_LOG = "IS_CUSTOM_LOG"
+    def IS_SHOW_FUNCTION_NAME = "IS_SHOW_FUNCTION_NAME"
+    def IS_SHOW_THREAD_NAME = "IS_SHOW_THREAD_NAME"
+    def MARKET = "MARKET"
+    def GOOGLE_PLAY = '"2"'
+    def WEB_SITE = '"4"'
+    flavorDimensions "default"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.appId
+
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            //Log
+            debuggable true
+            buildConfigField BOOLEAN, IS_CUSTOM_LOG, TRUE
+            buildConfigField BOOLEAN, IS_SHOW_FUNCTION_NAME, TRUE
+            buildConfigField BOOLEAN, IS_SHOW_THREAD_NAME, FALSE
+            //======================================================================================
+            manifestPlaceholders = [applicationLabel: "@string/app_name_debug"]
+        }
+
+        release {
+            //Log
+            debuggable false
+            buildConfigField BOOLEAN, IS_CUSTOM_LOG, FALSE
+            buildConfigField BOOLEAN, IS_SHOW_FUNCTION_NAME, FALSE
+            buildConfigField BOOLEAN, IS_SHOW_THREAD_NAME, FALSE
+            //======================================================================================
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //======================================================================================
+            manifestPlaceholders = [applicationLabel: "@string/app_name"]
+        }
+    }
+    productFlavors {
+        GooglePlay {
+            buildConfigField STRING, MARKET, GOOGLE_PLAY
+            versionCode rootProject.ext.versionCode
+            versionName rootProject.ext.versionName
+        }
+    }
+    productFlavors {
+        Web_Site {
+            buildConfigField STRING, MARKET, WEB_SITE
+            versionCode rootProject.ext.versionCode
+            versionName rootProject.ext.versionName
+        }
+    }
+    //change name output apk
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            project.ext { appName = 'dubsmash' }
+            outputFileName = "${variant.versionName}_${project.ext.appName}" +
+                    "(" + getDate() + ")" +
+                    "_${variant.buildType.name}" +
+                    "_${variant.productFlavors[0].name}" +
+                    "_V${variant.versionCode}.apk"
+        }
+    }
+}
+
+static def getDate() {
+    new Date().format('yyyy.MM.dd')
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(path: ':module-core')
+    implementation project(path: ':module-ui')
+
+    /*Key Value Storage*/
+    implementation 'com.orhanobut:hawk:2.0.1'
+
+}
